@@ -18,8 +18,13 @@
 
 </head>
 
-<body>
-<canvas id="myCanvas" width="600px" height="600px"></canvas>
+<body style='background: #333;'>
+<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+<button onclick="stopSyncTimer('step100'); stopSyncTimer('step10'); stopSyncTimer('step1');">Stop</button>
+<button onclick="step()">1 Step</button>
+<button onclick="startSyncTimer('step100', step, 100); stopSyncTimer('step10'); stopSyncTimer('step1');">Start 1</button>
+<button onclick="startSyncTimer('step10', step, 10); stopSyncTimer('step100'); stopSyncTimer('step1');">Start 10</button>
+<button onclick="startSyncTimer('step1', step, 1); stopSyncTimer('step10'); stopSyncTimer('step100');">Start 100</button>
 
 </body>
 </html>
